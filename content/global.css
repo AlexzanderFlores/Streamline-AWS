@@ -1,0 +1,10 @@
+.saws-button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.saws-button i {
+  color: black !important;
+}

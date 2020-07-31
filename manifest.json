@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Streamline AWS",
+  "version": "1.0",
+  "description": "Helps to remove the many minor inconveniences in the AWS dashboard.",
+  "icons": {
+    "128": "media/logo128.png",
+    "48": "media/logo48.png",
+    "16": "media/logo16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.aws.amazon.com/*"],
+      "js": [
+        "./content/util.js",
+        "./content/cognito/copy-sub.js",
+        "./content/cognito/cognito.js",
+        "./content/content.js"
+      ],
+      "css": ["./content/global.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
